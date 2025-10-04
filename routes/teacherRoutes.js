@@ -9,4 +9,5 @@ router.get('/profile/:id', teacherController.getProfile);
 router.put('/profile/:id', teacherController.updateProfile);
 router.put('/change-password/:id', teacherController.changePassword);
 
+//export
 module.exports = router;
