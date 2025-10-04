@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circuit pattern background -->
+  <defs>
+    <radialGradient id="circuitGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00bcd4;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#00bcd4;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Main circle -->
+  <circle cx="80" cy="100" r="35" fill="none" stroke="#9ca3af" stroke-width="3"/>
+  
+  <!-- Circuit connections -->
+  <line x1="45" y1="80" x2="25" y2="60" stroke="#00bcd4" stroke-width="2"/>
+  <circle cx="25" cy="60" r="4" fill="#00bcd4"/>
+  
+  <line x1="115" y1="80" x2="135" y2="60" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="135" cy="60" r="4" fill="#9ca3af"/>
+  
+  <line x1="45" y1="120" x2="25" y2="140" stroke="#00bcd4" stroke-width="2"/>
+  <circle cx="25" cy="140" r="4" fill="#00bcd4"/>
+  
+  <line x1="115" y1="120" x2="135" y2="140" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="135" cy="140" r="4" fill="#9ca3af"/>
+  
+  <line x1="80" y1="65" x2="80" y2="45" stroke="#00bcd4" stroke-width="2"/>
+  <circle cx="80" cy="45" r="6" fill="#00bcd4"/>
+  
+  <line x1="80" y1="135" x2="80" y2="155" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="80" cy="155" r="4" fill="#9ca3af"/>
+  
+  <!-- IoSC Text -->
+  <text x="170" y="110" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">IoSC</text>
+  <text x="320" y="125" font-family="Arial, sans-serif" font-size="12" fill="#00bcd4">GGSIPU EDC</text>
+</svg>

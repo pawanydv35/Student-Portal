@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-medium transition-all duration-200 active:scale-95;
+  }
+
+  /* IoSC-themed buttons */
+  .btn-iosc {
+    @apply bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95;
+  }
+
+  .btn-iosc-outline {
+    @apply border-2 border-cyan-500 text-cyan-600 hover:bg-cyan-500 hover:text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 active:scale-95;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6 hover:shadow-md transition-shadow duration-200;
+  }
+
+  /* IoSC-themed cards */
+  .card-iosc {
+    @apply bg-gradient-to-br from-white to-cyan-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-sm border border-cyan-100 dark:border-cyan-900/20 p-6 hover:shadow-md transition-all duration-200;
+  }
+
+  .card-featured {
+    @apply bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-cyan-200 shadow-lg;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors bg-white dark:bg-gray-700 text-gray-900 dark:text-white;
+  }
+
+  .navbar-glass {
+    @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/20;
+  }
+
+  /* Mobile-first responsive utilities */
+  .mobile-tab-bar {
+    @apply fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 z-50 md:hidden;
+  }
+
+  .mobile-tab-item {
+    @apply flex-1 flex flex-col items-center justify-center py-2 text-xs font-medium transition-colors;
+  }
+
+  .mobile-tab-active {
+    @apply text-blue-600 dark:text-blue-400;
+  }
+
+  .mobile-tab-inactive {
+    @apply text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300;
+  }
+
+  /* Touch-friendly buttons */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+
+  /* Swipe indicators */
+  .swipe-indicator {
+    @apply w-12 h-1 bg-gray-300 dark:bg-gray-600 rounded-full mx-auto mb-4;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Loading animation */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slide animations */
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* IoSC-themed animations */
+.pulse-iosc {
+  animation: pulseIosc 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulseIosc {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.glow-iosc {
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+  animation: glowIosc 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowIosc {
+  from {
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
+  }
+}
+
+/* Circuit-like background pattern */
+.circuit-bg {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 188, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  background-size: 100px 100px;
+}

@@ -1,0 +1,16 @@
+export const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
+
+export const validatePassword = (password: string): boolean => {
+    return password.length >= 6; // Minimum password length
+};
+
+export const validateAttendance = (attendance: number): boolean => {
+    return attendance >= 0 && attendance <= 100; // Attendance percentage should be between 0 and 100
+};
+
+export const validateAssignmentSubmission = (submissionDate: Date, dueDate: Date): boolean => {
+    return submissionDate <= dueDate; // Submission date should not be after due date
+};

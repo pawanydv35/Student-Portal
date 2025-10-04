@@ -1,0 +1,11 @@
+{
+  "name": "@unione/shared",
+  "version": "1.0.0",
+  "description": "Shared utilities and types for UniONE platform",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo 'Shared package build complete'"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
